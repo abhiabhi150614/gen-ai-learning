@@ -1,7 +1,6 @@
 from langchain_ollama import ChatOllama
 
-model = ChatOllama(model="gemma3:1b")   # or "gemma:instruct", "mistral:instruct"
-
+model = ChatOllama(model="gemma3:1b")  #use other ollama models 
 chat_history = [
     {"role": "system", "content": "your name is abhishek b shetty and you are a helpful ai agent"}
 ]
