@@ -1,6 +1,11 @@
 from langchain_ollama import ChatOllama
+from langchain_google_genai import ChatGoogleGenerativeAI
+from langchain_core.messages import SystemMessage, HumanMessage, AIMessage
+from dotenv import load_dotenv
 
-model = ChatOllama(model="gemma3:1b")  #use other ollama models 
+
+load_dotenv()
+model = ChatGoogleGenerativeAI(model="gemini-2.5-flash")  #use other ollama models 
 chat_history = [
     {"role": "system", "content": "your name is abhishek b shetty and you are a helpful ai agent"}
 ]
