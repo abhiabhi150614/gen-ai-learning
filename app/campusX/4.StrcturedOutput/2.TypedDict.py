@@ -14,7 +14,7 @@ class Review(TypedDict):
     sentiment :  Annotated[Literal["pos","neutral","neg"],"return in terms of true if positive and false if negative"]
     pros : Annotated[Optional[list[str]],"write down all the pros of the review in short 1 words"]
     cons : Annotated[Optional[list[str]],"write down all cons of the review in short 1 words"]
-    name : Annotated[Optional[str],"Write down the name of the reviewer"]
+    name : Annotated[Optional[str],"Write  the name of the person who gave  reviewer"]
 
 
 
@@ -22,9 +22,9 @@ class Review(TypedDict):
 
 
 
-model = ChatGoogleGenerativeAI(model = "gemini-2.5-flash")
+#model = ChatGoogleGenerativeAI(model = "gemini-2.5-flash")
 
-#model = ChatOllama(model = "gemma3:1b")
+model = ChatOllama(model = "gemma3:1b")
 
 
 strct = model.with_structured_output(Review)
@@ -50,7 +50,7 @@ Bloatware still exists in One UI
 Expensive compared to competitors
 
                                  
-Review by Abhishek shetty
+Reviewer name : 'Abhishek B shetty'
                         
 """)
 
@@ -60,6 +60,3 @@ Review by Abhishek shetty
 
 
 print(response)
-
-print(response['sentiment'])
-print(response['name'])
