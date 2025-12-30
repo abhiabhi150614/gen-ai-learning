@@ -19,7 +19,7 @@ documents = [
 ]
 
 
-query = "tell me about virat kohli"
+query = "which cricketer shows anger while playing"
 
 vectors_emb = embeddings.embed_documents(documents)
 query_emb = embeddings.embed_query(query)
