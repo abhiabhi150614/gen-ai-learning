@@ -7,7 +7,7 @@ pydantic
 # LangChain Core
 langchain
 langchain-core
-
+grandalf
 # OpenAI Integration
 langchain-openai
 openai
