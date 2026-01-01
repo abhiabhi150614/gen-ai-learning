@@ -77,3 +77,4 @@ res = chain.invoke({'text' : text})
 print(res)
 
 
+chain.get_graph().print_ascii()
