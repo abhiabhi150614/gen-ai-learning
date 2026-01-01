@@ -18,7 +18,12 @@ pt = PromptTemplate(
     input_variables = 'topic'
 )
 
-chain = RunnableSequence(pt,model,p)
+
+pt2 = PromptTemplate(
+    template = 'explain the following joke {text}',
+    input_variable = 'text'
+)
+chain = RunnableSequence(pt,model,p,pt2,model,p)
 
 
 k = chain.invoke({'topic' : 'cricket'})
